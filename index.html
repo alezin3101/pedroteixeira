@@ -178,7 +178,7 @@ ul,ol{padding:0;list-style:none}
 @media (min-width:1000px){
   .lado{display:flex;position:fixed;top:50%;z-index:1;--gap:calc((100vw - 520px) / 2)}
   .lado--esq{left:calc(var(--gap) / 2);transform:translate(-50%,-50%);flex-direction:row;align-items:center;gap:22px}
-  .lc{--fs:min(14vh,calc(var(--gap) * .42),140px);display:flex;flex-direction:column;align-items:center;gap:18px;animation:ladoIn 1.4s var(--ease) .2s both}
+  .lc{--fs:min(11vh,calc(var(--gap) * .42),140px);display:flex;flex-direction:column;align-items:center;gap:18px;animation:ladoIn 1.4s var(--ease) .2s both}
   .lc__txt{display:block;writing-mode:vertical-rl;transform:rotate(180deg);font:400 var(--fs)/.82 var(--display);letter-spacing:.04em;text-transform:uppercase;color:transparent;
     background:linear-gradient(180deg,rgba(21,128,61,0) 30%,rgba(21,128,61,.85) 42%,#4ADE80 50%,rgba(21,128,61,.85) 58%,rgba(21,128,61,0) 70%) 0 -200%/100% 300% no-repeat,#0A0B0B;
     -webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 14px 22px rgba(10,11,11,.28)) drop-shadow(0 3px 4px rgba(10,11,11,.22));
@@ -458,9 +458,10 @@ ul,ol{padding:0;list-style:none}
 /* ceu x inferno */
 .duelo{position:relative;margin-top:24px;border-radius:26px;overflow:hidden;display:grid;touch-action:pan-y;user-select:none;box-shadow:0 30px 60px -28px rgba(0,0,0,.8)}
 .lado-d{grid-area:1/1;padding:22px 18px 70px;text-align:left}
-.lado-d--inf{background:radial-gradient(90% 60% at 0% 0%,rgba(220,38,38,.45),transparent 65%),linear-gradient(180deg,#1A0A0A,#0A0505);color:#fff}
+.lado-d--inf{animation:brasa 3s ease-in-out infinite;background:radial-gradient(90% 60% at 0% 0%,rgba(220,38,38,.45),transparent 65%),linear-gradient(180deg,#1A0A0A,#0A0505);color:#fff}
 .lado-d--ceu{background:radial-gradient(90% 60% at 100% 0%,rgba(233,196,106,.55),transparent 65%),linear-gradient(180deg,#FFFDF5,#F3F8F1);color:var(--text);clip-path:inset(0 0 0 100%);transition:clip-path .9s cubic-bezier(.7,0,.2,1)}
 .duelo.ceu .lado-d--ceu{clip-path:inset(0 0 0 0)}
+@keyframes brasa{50%{box-shadow:inset 0 -40px 80px -40px rgba(220,38,38,.55)}}
 .lado-d h3{font:400 34px/.95 var(--display);text-transform:uppercase;letter-spacing:.01em}
 .lado-d--inf h3{color:#F87171;text-shadow:0 0 22px rgba(248,113,113,.45)}
 .lado-d--ceu h3{color:var(--gold1)}
@@ -469,6 +470,19 @@ ul,ol{padding:0;list-style:none}
 .lado-d li{display:flex;gap:10px;font:500 15px/1.4 var(--sans)}
 .lado-d li i{flex:none;font-style:normal}
 .lado-d--inf li{color:rgba(255,255,255,.82)}
+.lado-d__voz{margin-top:14px;font:400 30px/1 var(--display);letter-spacing:.02em;text-transform:uppercase}
+.lado-d--inf .lado-d__voz{color:#fff;text-shadow:0 0 24px rgba(248,113,113,.6)}
+.lado-d--ceu .lado-d__voz{color:var(--g)}
+.placar{margin-top:16px;padding:14px;border-radius:18px}
+.placar span{display:block;font:600 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.placar b{display:block;margin-top:6px;font:400 40px/.95 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.placar em{display:block;margin-top:6px;font:500 14px/1.45 var(--sans);font-style:normal}
+.lado-d--inf .placar{background:rgba(220,38,38,.16);border:1px solid rgba(248,113,113,.4)}
+.lado-d--inf .placar b{color:#F87171;text-shadow:0 0 22px rgba(248,113,113,.5)}
+.lado-d--inf .placar em{color:#FECACA}
+.lado-d--ceu .placar{background:linear-gradient(160deg,rgba(34,197,94,.16),rgba(233,196,106,.18));border:1px solid rgba(21,128,61,.3)}
+.lado-d--ceu .placar b{color:var(--g)}
+.lado-d--ceu .placar em{color:var(--text2)}
 .lado-d__fim{margin-top:16px;padding:12px 14px;border-radius:16px;font:600 14.5px/1.4 var(--sans)}
 .lado-d--inf .lado-d__fim{background:rgba(220,38,38,.16);border:1px solid rgba(248,113,113,.35);color:#FECACA}
 .lado-d--ceu .lado-d__fim{background:rgba(233,196,106,.2);border:1px solid rgba(122,90,18,.25);color:var(--gold1)}
@@ -567,9 +581,9 @@ ul,ol{padding:0;list-style:none}
 <aside class="lado lado--esq" aria-hidden="true">
   <span class="lado__fio"></span>
   <div class="lc">
-    <span class="lc__txt">Closer</span>
+    <span class="lc__txt">Imparável</span>
   </div>
-  <span class="lado__info">Vendas <i></i> Comercial <i></i> Mentalidade</span>
+  <span class="lado__info">Do zero <i></i> Ao topo <i></i> Em vendas</span>
 </aside>
 
 <nav class="lado lado--dir js-mapa" aria-label="Seções da página">
@@ -592,7 +606,7 @@ ul,ol{padding:0;list-style:none}
     <section class="sec capa grao js-in" aria-labelledby="nome">
       <div class="palco">
         <div class="closer" aria-hidden="true">
-          <span class="closer__txt">Closer</span>
+          <span class="closer__txt">Imparável</span>
           <span class="closer__fio"></span>
         </div>
         <div class="retrato">
@@ -641,7 +655,7 @@ ul,ol{padding:0;list-style:none}
     </nav>
 
     <div class="faixas" aria-hidden="true">
-      <div class="faixa faixa--2"><div class="faixa__trilho"><span>Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i> Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i></span><span>Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i> Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i></span></div></div>
+      <div class="faixa faixa--2"><div class="faixa__trilho"><span>Picolé <i></i> Muambeiro <i></i> Celular <i></i> Carro <i></i> Picolé <i></i> Muambeiro <i></i> Celular <i></i> Carro <i></i></span><span>Picolé <i></i> Muambeiro <i></i> Celular <i></i> Carro <i></i> Picolé <i></i> Muambeiro <i></i> Celular <i></i> Carro <i></i></span></div></div>
       <div class="faixa faixa--1"><div class="faixa__trilho"><span>Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i> Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i></span><span>Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i> Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i></span></div></div>
     </div>
 
@@ -650,8 +664,8 @@ ul,ol{padding:0;list-style:none}
       <h2 class="titulo" id="hist-t">Eu vendi <em>de tudo</em></h2>
       <p class="texto">Ninguém me deu nada pronto. Cada venda me ensinou alguma coisa.</p>
       <div class="galeria js-gal">
-        <figure class="sem-foto"><span class="sem-foto__ic" aria-hidden="true">🍦</span><figcaption><b>Picolé na rua</b><span>O começo</span><small>Sol na cabeça e caixa de isopor. Aprendi a ouvir "não".</small></figcaption></figure>
-        <figure class="sem-foto"><span class="sem-foto__ic" aria-hidden="true">🎒</span><figcaption><b>Muamba</b><span>Vendendo pro colega</span><small>Fone, capinha, acessório. Tudo que dava pra vender.</small></figcaption></figure>
+        <figure><img src="images/historia-picole.webp" alt="Pedro jovem com o carrinho e a caixa de picolé" width="900" height="1600" loading="lazy" decoding="async" style="object-position:50% 30%"><figcaption><b>Picolé na rua</b><span>O começo</span><small>Carrinho, isopor e sol na cabeça. Foi ali que aprendi a ouvir "não".</small></figcaption></figure>
+        <figure><img src="images/historia-muamba.webp" alt="Pedro jovem e os produtos que revendia: TV box, celular, boné e perfume" width="1254" height="1254" loading="lazy" decoding="async" style="object-position:38% 50%"><figcaption><b>Muambeiro</b><span>Vendendo pro colega</span><small>Celular, boné, perfume, TV box. Tudo que dava pra vender.</small></figcaption></figure>
         <figure><img src="images/historia-churrasco.webp" alt="Pedro trabalhando como churrasqueiro numa espeteria" width="1284" height="2057" loading="lazy" decoding="async"><figcaption><b>Espeteria</b><span>Churrasqueiro</span><small>Atrás da grelha, atendendo cliente toda noite.</small></figcaption></figure>
         <figure><img src="images/historia-celular.webp" alt="Pedro vendendo celular no balcão de uma loja" width="1284" height="2168" loading="lazy" decoding="async"><figcaption><b>Loja de celular</b><span>Balcão</span><small>Onde eu comecei a levar venda a sério.</small></figcaption></figure>
         <figure><img src="images/historia-carro.webp" alt="Pedro entregando um carro com laço vermelho para um cliente" width="1284" height="1617" loading="lazy" decoding="async" style="object-position:70% 50%"><figcaption><b>Carros</b><span>Sonho realizado</span><small>Entregar a chave e ver o cliente feliz.</small></figcaption></figure>
@@ -693,10 +707,10 @@ ul,ol{padding:0;list-style:none}
 
     <section class="sec sec--claro abordagem rv" aria-labelledby="ab-t">
       <span class="rotulo">02 · Talvez você esteja aqui</span>
-      <h2 class="palavras js-words" id="ab-t">Você vende. Mas o mês <span class="verde">nunca fecha igual.</span></h2>
-      <p class="texto">Bate meta num mês, zera no outro. Trava na hora de falar o preço. Rende muito numa semana e some na seguinte. <span class="marca js-mark">Eu já estive em todos esses lugares.</span></p>
+      <h2 class="palavras js-words" id="ab-t">Você trabalha muito. E no fim do mês, <span class="verde">cadê o dinheiro?</span></h2>
+      <p class="texto">Responde cliente até de madrugada. Ouve "vou pensar" o dia inteiro. Dá desconto pra não perder e perde mesmo assim. Vê gente que trabalha menos ganhando o triplo e começa a achar que o problema é você. <span class="marca js-mark">Não é você. É o jeito que te ensinaram a vender.</span></p>
       <ul class="mini">
-        <li>Vendedor</li><li>Closer</li><li>Autônomo</li><li>Dono de negócio</li><li>Começando agora</li>
+        <li>"Vou pensar"</li><li>Cliente sumiu</li><li>Meta zerada</li><li>Desconto toda hora</li><li>Comissão que não paga as contas</li>
       </ul>
       <a class="btn js-wa" data-msg="Oi Pedro! Me identifiquei com o que você escreveu. Quero conversar." href="#" target="_blank" rel="noopener">
         <span class="btn__wa" aria-hidden="true"><svg><use href="#wa"/></svg></span>
@@ -707,28 +721,32 @@ ul,ol{padding:0;list-style:none}
 
     <section class="sec sec--claro rv" aria-labelledby="duelo-t">
       <span class="rotulo">03 · As decisões</span>
-      <h2 class="titulo" id="duelo-t">Dois caminhos. <em>Você escolhe.</em></h2>
+      <h2 class="titulo" id="duelo-t">Duas decisões. <em>Duas vidas.</em></h2>
       <div class="chave js-chave"><button type="button" aria-pressed="true">🔥 Inferno</button><button type="button" aria-pressed="false">☀️ Céu</button></div>
       <div class="duelo js-duelo">
         <div class="lado-d lado-d--inf">
           <h3>O inferno</h3><small>As decisões que fazem perder</small>
+          <p class="lado-d__voz">"Amanhã eu começo."</p>
           <ul>
             <li><i>✕</i>Não faz follow-up pra "não incomodar"</li>
-            <li><i>✕</i>Dá desconto pra fechar logo</li>
-            <li><i>✕</i>Espera estar motivado pra trabalhar</li>
+            <li><i>✕</i>Dá desconto antes do cliente pedir</li>
+            <li><i>✕</i>Só trabalha quando está motivado</li>
             <li><i>✕</i>Culpa o mercado, o cliente, o produto</li>
+            <li><i>✕</i>Copia o que todo mundo faz</li>
           </ul>
-          <p class="lado-d__fim">Fim do mês no vermelho, ansiedade e vergonha de dizer quanto ganha.</p>
+          <div class="placar"><span>Dia 25</span><b>Conta no vermelho</b><em>Ansiedade, vergonha de dizer quanto ganha e a sensação de que vendas "não é pra você".</em></div>
         </div>
         <div class="lado-d lado-d--ceu">
           <h3>O céu</h3><small>O que você busca</small>
+          <p class="lado-d__voz">"Hoje eu decido."</p>
           <ul>
-            <li><i>✓</i>Saber quanto vai ganhar no mês</li>
-            <li><i>✓</i>Cobrar o que vale, sem gaguejar</li>
+            <li><i>✓</i>Saber no dia 1 quanto vai ganhar no mês</li>
+            <li><i>✓</i>Falar o preço olhando no olho</li>
             <li><i>✓</i>Ter rotina até no dia ruim</li>
-            <li><i>✓</i>Ser a referência do time</li>
+            <li><i>✓</i>Ser a referência que o time copia</li>
+            <li><i>✓</i>Dar pra família o que você nunca teve</li>
           </ul>
-          <p class="lado-d__fim">Previsibilidade, respeito e uma renda que sustenta a família.</p>
+          <div class="placar"><span>Dia 25</span><b>Meta batida</b><em>Paz pra dormir, respeito de quem duvidou e liberdade pra escolher o próximo passo.</em></div>
         </div>
       </div>
       <p class="duelo__dica">Toque e veja os dois lados</p>
@@ -736,11 +754,12 @@ ul,ol{padding:0;list-style:none}
 
     <section class="sec sec--claro rv" aria-labelledby="saida-t">
       <span class="rotulo">04 · Como eu saí</span>
-      <h2 class="titulo" id="saida-t">Eu já morei <em>no inferno</em></h2>
+      <h2 class="titulo" id="saida-t">Sonhar é fácil. <em>Agir muda tudo.</em></h2>
       <ol class="saida">
-        <li><b>01</b><span><strong>O fundo.</strong> Teve mês que eu não fechei quase nada e pensei em largar vendas.</span></li>
-        <li><b>02</b><span><strong>A decisão.</strong> Parei de esperar o cliente certo e o dia certo. Criei uma rotina e segui.</span></li>
-        <li><b>03</b><span><strong>A virada.</strong> Primeiro pouco, depois muito. Não foi talento. Foi método.</span></li>
+        <li><b>01</b><span><strong>Método claro.</strong> Parei de vender no improviso. Cada conversa passou a ter começo, meio e fechamento.</span></li>
+        <li><b>02</b><span><strong>Processo.</strong> O mesmo caminho todo dia, com ou sem vontade. É isso que dá resultado previsível.</span></li>
+        <li><b>03</b><span><strong>Treinamento.</strong> Estudei, ouvi quem estava na frente e treinei até a venda ficar natural.</span></li>
+        <li><b>04</b><span><strong>Decisões.</strong> Escolhi o caminho difícil quando o fácil era desistir. Foi aí que tudo mudou.</span></li>
       </ol>
     </section>
 

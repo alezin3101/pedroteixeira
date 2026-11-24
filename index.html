@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0B0C0C">
-<title>Pedro Teixeira · Closer de vendas para clínicas médicas</title>
-<meta name="description" content="Pedro Teixeira, closer de vendas e estrategista de clínicas médicas. Mais de R$ 5 milhões gerados em vendas. Faturamento maior e previsível para a sua clínica.">
+<title>Pedro Teixeira · Do picolé a mais de R$ 700 mil por mês em vendas</title>
+<meta name="description" content="Pedro Teixeira vendeu picolé, muamba, celular e carro até fechar mais de R$ 700 mil por mês. Vendas, comercial e mentalidade para quem vive de vender.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@400..800&family=Geist+Mono:wght@500;600&display=swap">
@@ -444,6 +444,40 @@ ul,ol{padding:0;list-style:none}
 .pontos i{width:7px;height:7px;border-radius:9px;background:rgba(14,16,15,.18);transition:all .4s var(--spring)}
 .pontos i.on{width:24px;background:var(--g)}
 
+/* historia: cards sem foto */
+.galeria figure.sem-foto{background:radial-gradient(90% 60% at 50% 30%,rgba(34,197,94,.28),transparent 70%),var(--ink);display:grid;place-items:center}
+.sem-foto__ic{font-size:92px;line-height:1;filter:drop-shadow(0 18px 24px rgba(0,0,0,.6));margin-bottom:60px}
+.galeria figure.virada{box-shadow:0 0 0 2px var(--g2),0 24px 50px -18px rgba(34,197,94,.8)}
+.galeria figcaption small{display:block;margin-top:8px;font:500 13.5px/1.4 var(--sans);color:rgba(255,255,255,.85)}
+.saida{margin-top:22px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.saida li{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:18px;background:var(--g3);border:1px solid var(--gb)}
+.saida li b{flex:none;font:400 22px/1 var(--display);color:var(--g)}
+.saida li span{font:500 15px/1.45 var(--sans);color:var(--text2)}
+.saida li span strong{color:var(--text)}
+
+/* ceu x inferno */
+.duelo{position:relative;margin-top:24px;border-radius:26px;overflow:hidden;display:grid;touch-action:pan-y;user-select:none;box-shadow:0 30px 60px -28px rgba(0,0,0,.8)}
+.lado-d{grid-area:1/1;padding:22px 18px 70px;text-align:left}
+.lado-d--inf{background:radial-gradient(90% 60% at 0% 0%,rgba(220,38,38,.45),transparent 65%),linear-gradient(180deg,#1A0A0A,#0A0505);color:#fff}
+.lado-d--ceu{background:radial-gradient(90% 60% at 100% 0%,rgba(233,196,106,.55),transparent 65%),linear-gradient(180deg,#FFFDF5,#F3F8F1);color:var(--text);clip-path:inset(0 0 0 100%);transition:clip-path .9s cubic-bezier(.7,0,.2,1)}
+.duelo.ceu .lado-d--ceu{clip-path:inset(0 0 0 0)}
+.lado-d h3{font:400 34px/.95 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.lado-d--inf h3{color:#F87171;text-shadow:0 0 22px rgba(248,113,113,.45)}
+.lado-d--ceu h3{color:var(--gold1)}
+.lado-d small{display:block;margin-top:6px;font:600 10.5px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.lado-d ul{margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.lado-d li{display:flex;gap:10px;font:500 15px/1.4 var(--sans)}
+.lado-d li i{flex:none;font-style:normal}
+.lado-d--inf li{color:rgba(255,255,255,.82)}
+.lado-d__fim{margin-top:16px;padding:12px 14px;border-radius:16px;font:600 14.5px/1.4 var(--sans)}
+.lado-d--inf .lado-d__fim{background:rgba(220,38,38,.16);border:1px solid rgba(248,113,113,.35);color:#FECACA}
+.lado-d--ceu .lado-d__fim{background:rgba(233,196,106,.2);border:1px solid rgba(122,90,18,.25);color:var(--gold1)}
+.chave{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:20px;padding:5px;border-radius:999px;background:var(--page);border:1px solid var(--line)}
+.chave button{height:46px;border-radius:999px;font:700 14.5px/1 var(--sans);color:var(--mute);transition:all .4s var(--ease)}
+.chave button[aria-pressed="true"]:first-child{background:linear-gradient(180deg,#3A0D0D,#1A0505);color:#FCA5A5;box-shadow:0 10px 20px -8px rgba(220,38,38,.7)}
+.chave button[aria-pressed="true"]:last-child{background:linear-gradient(180deg,#FFF3C4,#E9C46A);color:var(--gold1);box-shadow:0 10px 20px -8px rgba(233,196,106,.9)}
+.duelo__dica{margin-top:12px;font:600 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
 /* FINAL */
 .fim{padding:0;background:var(--ink);color:#fff;display:flex;flex-direction:column}
 .fim__foto{position:relative;aspect-ratio:4/5;overflow:hidden}
@@ -527,7 +561,7 @@ ul,ol{padding:0;list-style:none}
     <span class="avatar"><img src="images/perfil.webp" alt="" width="150" height="150" decoding="async"></span>
     <span><span class="barra__nome">Pedro Teixeira</span><span class="barra__status"><i class="ponto" aria-hidden="true"></i>Agenda aberta</span></span>
   </a>
-  <a class="barra__wa js-wa" data-msg="Olá, Pedro! Vim pela sua página e quero conversar sobre a minha clínica." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+  <a class="barra__wa js-wa" data-msg="Oi Pedro! Vi seu site e quero sair do inferno das vendas 😅" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
 </header>
 
 <aside class="lado lado--esq" aria-hidden="true">
@@ -535,7 +569,7 @@ ul,ol{padding:0;list-style:none}
   <div class="lc">
     <span class="lc__txt">Closer</span>
   </div>
-  <span class="lado__info">Vendas de alto valor <i></i> Clínicas médicas</span>
+  <span class="lado__info">Vendas <i></i> Comercial <i></i> Mentalidade</span>
 </aside>
 
 <nav class="lado lado--dir js-mapa" aria-label="Seções da página">
@@ -543,10 +577,10 @@ ul,ol{padding:0;list-style:none}
   <ol class="mapa">
     <span class="mapa__fill" aria-hidden="true"></span>
     <li><a href="#topo" data-alvo="topo"><span class="mapa__t">Início</span><span class="mapa__n">01</span></a></li>
-    <li><a href="#res-t" data-alvo="res-t"><span class="mapa__t">Resultados</span><span class="mapa__n">02</span></a></li>
-    <li><a href="#ab-t" data-alvo="ab-t"><span class="mapa__t">Abordagem</span><span class="mapa__n">03</span></a></li>
-    <li><a href="#met-t" data-alvo="met-t"><span class="mapa__t">Método</span><span class="mapa__n">04</span></a></li>
-    <li><a href="#pn-t" data-alvo="pn-t"><span class="mapa__t">Painel</span><span class="mapa__n">05</span></a></li>
+    <li><a href="#hist-t" data-alvo="hist-t"><span class="mapa__t">História</span><span class="mapa__n">02</span></a></li>
+    <li><a href="#ab-t" data-alvo="ab-t"><span class="mapa__t">Você</span><span class="mapa__n">03</span></a></li>
+    <li><a href="#duelo-t" data-alvo="duelo-t"><span class="mapa__t">Decisões</span><span class="mapa__n">04</span></a></li>
+    <li><a href="#met-t" data-alvo="met-t"><span class="mapa__t">O caminho</span><span class="mapa__n">05</span></a></li>
     <li><a href="#fim-t" data-alvo="fim-t"><span class="mapa__t">Contato</span><span class="mapa__n">06</span></a></li>
   </ol>
   <span class="mapa__pct js-pct">00%</span>
@@ -565,7 +599,7 @@ ul,ol{padding:0;list-style:none}
           <div class="retrato__cartao js-tilt">
             <img class="js-par" src="./images/hero-1080.webp" alt="Pedro Teixeira de terno, em evento de vendas" width="1080" height="1440" fetchpriority="high" decoding="async">
           </div>
-          <span class="capa__kick rv-f" style="--d:1"><i class="ponto" aria-hidden="true"></i>Closer · Clínicas</span>
+          <span class="capa__kick rv-f" style="--d:1"><i class="ponto" aria-hidden="true"></i>Vendas · Comercial</span>
           <div class="retrato__nome">
             <h1 class="capa__nome" id="nome">
               <span class="linha js-split">Pedro</span>
@@ -578,14 +612,14 @@ ul,ol{padding:0;list-style:none}
 
       <div class="capa__corpo">
         <div class="tags rv-f" style="--d:3">
-          <span class="tag tag--verde">Closer de vendas</span>
-          <span class="tag">Estrategista de clínicas</span>
+          <span class="tag tag--verde">Vendia picolé</span>
+          <span class="tag">Hoje: +R$ 700 mil/mês</span>
         </div>
-        <p class="texto rv-f" style="--d:4">Eu estruturo o comercial da sua clínica para que cada contato no WhatsApp <span class="marca">vire tratamento fechado</span>.</p>
-        <p class="giro rv-f" style="--d:4"><span class="sr-only">Mais faturamento, previsibilidade e ticket médio</span><span aria-hidden="true">Mais <em>faturamento</em></span><span aria-hidden="true">Mais <em>previsibilidade</em></span><span aria-hidden="true">Mais <em>ticket médio</em></span></p>
-        <a class="btn js-wa rv-f" style="--d:5" data-msg="Olá, Pedro! Vim pela sua página e quero aumentar o faturamento da minha clínica com previsibilidade." href="#" target="_blank" rel="noopener">
+        <p class="texto rv-f" style="--d:4">Eu vendia picolé na rua. Hoje fecho <span class="marca">mais de R$ 700 mil por mês</span>. Não foi sorte. Foram decisões.</p>
+        <p class="giro rv-f" style="--d:4"><span class="sr-only">Mais vendas, mais rotina, mais resultado</span><span aria-hidden="true">Mais <em>vendas</em></span><span aria-hidden="true">Mais <em>rotina</em></span><span aria-hidden="true">Mais <em>resultado</em></span></p>
+        <a class="btn js-wa rv-f" style="--d:5" data-msg="Oi Pedro! Vi seu site e quero vender mais. Me ajuda?" href="#" target="_blank" rel="noopener">
           <span class="btn__wa" aria-hidden="true"><svg><use href="#wa"/></svg></span>
-          <span class="btn__txt"><b>Quero faturar mais</b><small>Conversa direta no WhatsApp</small></span>
+          <span class="btn__txt"><b>Quero vender mais</b><small>Conversa direta no WhatsApp</small></span>
           <span class="btn__seta" aria-hidden="true"><svg width="20" height="20"><use href="#seta"/></svg></span>
         </a>
       </div>
@@ -600,24 +634,39 @@ ul,ol{padding:0;list-style:none}
         <span class="rede__logo rede__logo--tk" aria-hidden="true"><svg><use href="#tk"/></svg></span>
         <span><b>TikTok</b><small>@opedroteixeiraa</small></span>
       </a>
-      <a class="rede rede--wa js-wa rv-f" style="--d:2" data-msg="Olá, Pedro! Vim pela sua página e quero conversar sobre a minha clínica." href="#" target="_blank" rel="noopener">
+      <a class="rede rede--wa js-wa rv-f" style="--d:2" data-msg="Oi Pedro! Vi seu site e quero sair do inferno das vendas 😅" href="#" target="_blank" rel="noopener">
         <span class="rede__logo rede__logo--wa" aria-hidden="true"><svg><use href="#wa"/></svg></span>
         <span><b>WhatsApp</b><small>Falar com o Pedro</small></span>
       </a>
     </nav>
 
     <div class="faixas" aria-hidden="true">
-      <div class="faixa faixa--2"><div class="faixa__trilho"><span>Previsibilidade <i></i> Ticket médio <i></i> Conversão <i></i> Follow-up <i></i> Previsibilidade <i></i> Ticket médio <i></i> Conversão <i></i> Follow-up <i></i></span><span>Previsibilidade <i></i> Ticket médio <i></i> Conversão <i></i> Follow-up <i></i> Previsibilidade <i></i> Ticket médio <i></i> Conversão <i></i> Follow-up <i></i></span></div></div>
-      <div class="faixa faixa--1"><div class="faixa__trilho"><span>Closer <i></i> Alto valor <i></i> Negociação <i></i> Fechamento <i></i> Closer <i></i> Alto valor <i></i> Negociação <i></i> Fechamento <i></i></span><span>Closer <i></i> Alto valor <i></i> Negociação <i></i> Fechamento <i></i> Closer <i></i> Alto valor <i></i> Negociação <i></i> Fechamento <i></i></span></div></div>
+      <div class="faixa faixa--2"><div class="faixa__trilho"><span>Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i> Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i></span><span>Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i> Picolé <i></i> Muamba <i></i> Celular <i></i> Carro <i></i></span></div></div>
+      <div class="faixa faixa--1"><div class="faixa__trilho"><span>Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i> Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i></span><span>Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i> Vendas <i></i> Comercial <i></i> Decisão <i></i> Rotina <i></i></span></div></div>
     </div>
+
+    <section class="sec sec--claro rv" aria-labelledby="hist-t">
+      <span class="rotulo">01 · A história</span>
+      <h2 class="titulo" id="hist-t">Eu vendi <em>de tudo</em></h2>
+      <p class="texto">Ninguém me deu nada pronto. Cada venda me ensinou alguma coisa.</p>
+      <div class="galeria js-gal">
+        <figure class="sem-foto"><span class="sem-foto__ic" aria-hidden="true">🍦</span><figcaption><b>Picolé na rua</b><span>O começo</span><small>Sol na cabeça e caixa de isopor. Aprendi a ouvir "não".</small></figcaption></figure>
+        <figure class="sem-foto"><span class="sem-foto__ic" aria-hidden="true">🎒</span><figcaption><b>Muamba</b><span>Vendendo pro colega</span><small>Fone, capinha, acessório. Tudo que dava pra vender.</small></figcaption></figure>
+        <figure><img src="images/historia-churrasco.webp" alt="Pedro trabalhando como churrasqueiro numa espeteria" width="1284" height="2057" loading="lazy" decoding="async"><figcaption><b>Espeteria</b><span>Churrasqueiro</span><small>Atrás da grelha, atendendo cliente toda noite.</small></figcaption></figure>
+        <figure><img src="images/historia-celular.webp" alt="Pedro vendendo celular no balcão de uma loja" width="1284" height="2168" loading="lazy" decoding="async"><figcaption><b>Loja de celular</b><span>Balcão</span><small>Onde eu comecei a levar venda a sério.</small></figcaption></figure>
+        <figure><img src="images/historia-carro.webp" alt="Pedro entregando um carro com laço vermelho para um cliente" width="1284" height="1617" loading="lazy" decoding="async" style="object-position:70% 50%"><figcaption><b>Carros</b><span>Sonho realizado</span><small>Entregar a chave e ver o cliente feliz.</small></figcaption></figure>
+        <figure class="virada"><img src="images/palco.webp" alt="Pedro sorrindo com a mão no ouvido em evento de vendas" width="900" height="1200" loading="lazy" decoding="async"><figcaption><b>Do balcão ao palco</b><span>Hoje</span><small>Da caixa de isopor a mais de R$ 700 mil por mês.</small></figcaption></figure>
+      </div>
+      <div class="pontos js-pontos" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+    </section>
 
     <section class="sec res grao rv js-res" aria-labelledby="res-t">
       <div class="res__topo">
         <span class="rotulo" style="color:rgba(255,255,255,.75)">Resultado real</span>
-        <span class="res__selo"><i class="ponto" aria-hidden="true"></i>Bastidores @grupodw</span>
+        <span class="res__selo"><i class="ponto" aria-hidden="true"></i>+R$ 700 mil/mês</span>
       </div>
       <p class="res__valor" aria-hidden="true"><sup>+R$</sup><span class="res__num js-count" data-to="5175000">0</span></p>
-      <h2 class="res__sub" id="res-t">Mais de R$ 5 milhões em vendas fechadas <span>em negociações reais.</span></h2>
+      <h2 class="res__sub" id="res-t">Mais de R$ 5 milhões em vendas fechadas <span>por quem começou vendendo picolé.</span></h2>
 
       <div class="grafico">
         <div class="grafico__topo"><span>Acumulado em vendas</span><b>+R$ 5,1M</b></div>
@@ -636,127 +685,86 @@ ul,ol{padding:0;list-style:none}
 
       <div class="kpis">
         <div class="kpi rv-f" style="--d:2"><small>01</small><b>R$5M+</b><span>Em vendas</span></div>
-        <div class="kpi rv-f" style="--d:3"><small>02</small><b>High</b><span>Ticket alto</span></div>
-        <div class="kpi rv-f" style="--d:4"><small>03</small><b>1:1</b><span>Negociação direta</span></div>
+        <div class="kpi rv-f" style="--d:3"><small>02</small><b>700K</b><span>Por mês</span></div>
+        <div class="kpi rv-f" style="--d:4"><small>03</small><b>0</b><span>Atalhos</span></div>
       </div>
-      <p class="res__nota">Experiência construída nos bastidores do <a href="https://www.instagram.com/grupodw/" target="_blank" rel="noopener">@grupodw</a>. É esse nível de fechamento que passa a trabalhar pelo faturamento da sua clínica.</p>
+      <p class="res__nota">Experiência construída nos bastidores do <a href="https://www.instagram.com/grupodw/" target="_blank" rel="noopener">@grupodw</a>. Não tem segredo. Tem decisão, rotina e muito "não" no caminho.</p>
     </section>
 
     <section class="sec sec--claro abordagem rv" aria-labelledby="ab-t">
-      <span class="rotulo">01 · A abordagem</span>
-      <h2 class="palavras js-words" id="ab-t">Não é sobre ter mais contato. <span class="verde">É sobre fechar.</span></h2>
-      <p class="texto">Eu entro no comercial da sua clínica com o olhar de quem vive de fechar negócio. Organizo o caminho do paciente, <span class="marca js-mark">do primeiro "oi" ao tratamento pago</span>, e coloco número em cada etapa.</p>
+      <span class="rotulo">02 · Talvez você esteja aqui</span>
+      <h2 class="palavras js-words" id="ab-t">Você vende. Mas o mês <span class="verde">nunca fecha igual.</span></h2>
+      <p class="texto">Bate meta num mês, zera no outro. Trava na hora de falar o preço. Rende muito numa semana e some na seguinte. <span class="marca js-mark">Eu já estive em todos esses lugares.</span></p>
       <ul class="mini">
-        <li>Closer</li><li>Alto valor</li><li>Negociação</li><li>Previsibilidade</li>
+        <li>Vendedor</li><li>Closer</li><li>Autônomo</li><li>Dono de negócio</li><li>Começando agora</li>
       </ul>
-      <a class="btn js-wa" data-msg="Olá, Pedro! Vim pela sua página e quero esse nível de fechamento na minha clínica." href="#" target="_blank" rel="noopener">
+      <a class="btn js-wa" data-msg="Oi Pedro! Me identifiquei com o que você escreveu. Quero conversar." href="#" target="_blank" rel="noopener">
         <span class="btn__wa" aria-hidden="true"><svg><use href="#wa"/></svg></span>
-        <span class="btn__txt"><b>Quero isso na clínica</b><small>Fale direto com o Pedro</small></span>
+        <span class="btn__txt"><b>Sou eu. Quero mudar</b><small>Fale direto com o Pedro</small></span>
         <span class="btn__seta" aria-hidden="true"><svg width="20" height="20"><use href="#seta"/></svg></span>
       </a>
     </section>
 
-    <section class="sec sec--escuro grao metodo-sec rv" aria-labelledby="met-t">
-      <span class="rotulo">02 · O método</span>
-      <h2 class="titulo" id="met-t">4 etapas para <em>fechar mais</em></h2>
-      <ol class="metodo__lista js-tempo">
-        <span class="metodo__fill" aria-hidden="true"></span>
-        <li class="etapa" id="etapa-1"><span class="etapa__n">01</span><span class="etapa__fundo" aria-hidden="true">01</span><h3>Atendimento que converte</h3><p>Script, tempo de resposta e abordagem certa para o contato virar avaliação agendada.</p></li>
-        <li class="etapa" id="etapa-2"><span class="etapa__n">02</span><span class="etapa__fundo" aria-hidden="true">02</span><h3>Avaliação que conduz</h3><p>A consulta termina com plano, valor e decisão. Não com "vou pensar".</p></li>
-        <li class="etapa" id="etapa-3"><span class="etapa__n">03</span><span class="etapa__fundo" aria-hidden="true">03</span><h3>Follow-up com cadência</h3><p>Quem não fechou na hora recebe o próximo passo certo, no dia certo. Nenhum orçamento fica esquecido.</p></li>
-        <li class="etapa" id="etapa-4"><span class="etapa__n">04</span><span class="etapa__fundo" aria-hidden="true">04</span><h3>Números na mesa</h3><p>Comparecimento, conversão e ticket médio toda semana. É daqui que nasce a previsibilidade.</p></li>
+    <section class="sec sec--claro rv" aria-labelledby="duelo-t">
+      <span class="rotulo">03 · As decisões</span>
+      <h2 class="titulo" id="duelo-t">Dois caminhos. <em>Você escolhe.</em></h2>
+      <div class="chave js-chave"><button type="button" aria-pressed="true">🔥 Inferno</button><button type="button" aria-pressed="false">☀️ Céu</button></div>
+      <div class="duelo js-duelo">
+        <div class="lado-d lado-d--inf">
+          <h3>O inferno</h3><small>As decisões que fazem perder</small>
+          <ul>
+            <li><i>✕</i>Não faz follow-up pra "não incomodar"</li>
+            <li><i>✕</i>Dá desconto pra fechar logo</li>
+            <li><i>✕</i>Espera estar motivado pra trabalhar</li>
+            <li><i>✕</i>Culpa o mercado, o cliente, o produto</li>
+          </ul>
+          <p class="lado-d__fim">Fim do mês no vermelho, ansiedade e vergonha de dizer quanto ganha.</p>
+        </div>
+        <div class="lado-d lado-d--ceu">
+          <h3>O céu</h3><small>O que você busca</small>
+          <ul>
+            <li><i>✓</i>Saber quanto vai ganhar no mês</li>
+            <li><i>✓</i>Cobrar o que vale, sem gaguejar</li>
+            <li><i>✓</i>Ter rotina até no dia ruim</li>
+            <li><i>✓</i>Ser a referência do time</li>
+          </ul>
+          <p class="lado-d__fim">Previsibilidade, respeito e uma renda que sustenta a família.</p>
+        </div>
+      </div>
+      <p class="duelo__dica">Toque e veja os dois lados</p>
+    </section>
+
+    <section class="sec sec--claro rv" aria-labelledby="saida-t">
+      <span class="rotulo">04 · Como eu saí</span>
+      <h2 class="titulo" id="saida-t">Eu já morei <em>no inferno</em></h2>
+      <ol class="saida">
+        <li><b>01</b><span><strong>O fundo.</strong> Teve mês que eu não fechei quase nada e pensei em largar vendas.</span></li>
+        <li><b>02</b><span><strong>A decisão.</strong> Parei de esperar o cliente certo e o dia certo. Criei uma rotina e segui.</span></li>
+        <li><b>03</b><span><strong>A virada.</strong> Primeiro pouco, depois muito. Não foi talento. Foi método.</span></li>
       </ol>
     </section>
 
-    <section class="sec sec--claro rv" aria-labelledby="pn-t">
-      <span class="rotulo">03 · Visão do dono</span>
-      <h2 class="titulo" id="pn-t">Você sabe quanto vai <em>faturar no mês</em></h2>
-      <p class="texto">Com o comercial estruturado, você abre o celular e enxerga <span class="marca js-mark">quanto entrou, quanto vai entrar e onde está o dinheiro parado</span>. Sem achismo.</p>
-
-      <div class="painel js-painel" role="img" aria-label="Simulação do painel do dono da clínica: faturamento do mês, projeção da meta, funil de pacientes e fechamentos em tempo real">
-        <div class="toast js-toast" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span class="js-toast-t">Fechou</span></div>
-
-        <div class="pn__topo" aria-hidden="true">
-          <div class="pn__clin">
-            <i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i>
-            <span><b>Sua clínica</b><span>Novembro · dia 19 de 30</span></span>
-          </div>
-          <span class="ao-vivo"><i></i>Ao vivo</span>
-        </div>
-
-        <div class="pn__card" aria-hidden="true">
-          <div class="pn__lbl"><span>Faturamento do mês</span><em class="js-fatpct">70%</em></div>
-          <p class="pn__fat js-fat">R$ 84.300</p>
-          <p class="pn__meta">Meta <b>R$ 120.000</b> · faltam <b class="js-falta">R$ 35.700</b></p>
-          <div class="barra-meta"><span class="barra-meta__proj js-proj-b"></span><span class="barra-meta__fill js-fat-b"></span></div>
-          <div class="pn__proj">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>
-            <p>No ritmo atual, a meta é batida no <b class="js-dia">dia 27</b>. Projeção do mês: <b class="js-proj">R$ 133.100</b>.</p>
-          </div>
-        </div>
-
-        <div class="pn__card" aria-hidden="true">
-          <div class="pn__lbl"><span>Faturamento por semana</span><em>+18% vs mês ant.</em></div>
-          <div class="semanas js-sem">
-            <div class="sem"><span class="sem__v">21,4k</span><span class="sem__b"></span><span class="sem__l">S1</span></div>
-            <div class="sem"><span class="sem__v">26,8k</span><span class="sem__b"></span><span class="sem__l">S2</span></div>
-            <div class="sem"><span class="sem__v">24,1k</span><span class="sem__b"></span><span class="sem__l">S3</span></div>
-            <div class="sem sem--atual"><span class="sem__v js-sem-v">12,0k</span><span class="sem__b"></span><span class="sem__l">S4 agora</span></div>
-          </div>
-        </div>
-
-        <div class="pn__card" aria-hidden="true">
-          <div class="pn__lbl"><span>Funil do paciente</span><em>mês</em></div>
-          <div class="funil js-funil">
-            <div class="fn"><span class="fn__t">Chamaram no WhatsApp</span><span class="fn__n js-f0">142</span><span class="fn__b"><i></i></span></div>
-            <div class="fn"><span class="fn__t">Agendaram avaliação</span><span class="fn__n"><span class="js-f1">86</span><small class="js-p1">61%</small></span><span class="fn__b"><i></i></span></div>
-            <div class="fn"><span class="fn__t">Compareceram</span><span class="fn__n"><span class="js-f2">71</span><small class="js-p2">83%</small></span><span class="fn__b"><i></i></span></div>
-            <div class="fn fn--ok"><span class="fn__t">Fecharam tratamento</span><span class="fn__n"><span class="js-f3">38</span><small class="js-p3">54%</small></span><span class="fn__b"><i></i></span></div>
-          </div>
-        </div>
-
-        <div class="pn__grid" aria-hidden="true">
-          <div class="mini-kpi">
-            <svg class="spark" viewBox="0 0 46 18"><path d="M1 15 9 12 16 13 24 7 31 9 38 4 45 2"/></svg>
-            <span>Ticket médio</span><b class="js-ticket">R$ 2.218</b><small>+12% no mês</small>
-          </div>
-          <div class="mini-kpi">
-            <svg class="spark" viewBox="0 0 46 18"><path d="M1 3 9 6 16 5 24 10 31 11 38 14 45 16"/></svg>
-            <span>Tempo de resposta</span><b>4 min</b><small>antes: 3 h</small>
-          </div>
-          <div class="mini-kpi mini-kpi--alerta" style="grid-column:1/-1">
-            <span>Dinheiro na mesa · follow-up</span><b class="js-aberto">R$ 46.900</b><small>17 pacientes com próximo contato agendado</small>
-          </div>
-        </div>
-
-        <div class="pn__card" aria-hidden="true" style="padding-bottom:12px">
-          <div class="pn__lbl"><span>Movimento agora</span><em>WhatsApp</em></div>
-          <div class="feed js-feed"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec sec--claro rv" aria-labelledby="gal-t">
-      <span class="rotulo">04 · Bastidores</span>
-      <h2 class="titulo" id="gal-t">Presença que <em>fecha</em></h2>
-      <div class="galeria js-gal">
-        <figure><img src="images/palco.webp" alt="Pedro sorrindo ao telefone em evento de vendas" width="900" height="1200" loading="lazy" decoding="async"><figcaption><b>No palco</b><span>Sales Med</span></figcaption></figure>
-        <figure><img src="images/sofa-queixo.webp" alt="Pedro sentado em sofá, em ambiente de negócios" width="800" height="1200" loading="lazy" decoding="async"><figcaption><b>Bastidores</b><span>Evento de vendas</span></figcaption></figure>
-        <figure><img src="images/relogio.webp" alt="Pedro conferindo o relógio" width="800" height="1200" loading="lazy" decoding="async"><figcaption><b>Cada minuto conta</b><span>Tempo de resposta</span></figcaption></figure>
-        <figure><img src="images/sofa-blazer.webp" alt="Pedro ajustando o blazer, sorrindo" width="800" height="1200" loading="lazy" decoding="async"><figcaption><b>Vendas e cultura</b><span>Presença</span></figcaption></figure>
-      </div>
-      <div class="pontos js-pontos" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+    <section class="sec sec--escuro grao metodo-sec rv" aria-labelledby="met-t">
+      <span class="rotulo">05 · Agora é você</span>
+      <h2 class="titulo" id="met-t">4 passos pra <em>você sair também</em></h2>
+      <ol class="metodo__lista js-tempo">
+        <span class="metodo__fill" aria-hidden="true"></span>
+        <li class="etapa" id="etapa-1"><span class="etapa__n">01</span><span class="etapa__fundo" aria-hidden="true">01</span><h3>Entenda antes de vender</h3><p>Pergunte mais do que fala. Quem entende o problema do cliente não precisa empurrar nada.</p></li>
+        <li class="etapa" id="etapa-2"><span class="etapa__n">02</span><span class="etapa__fundo" aria-hidden="true">02</span><h3>Follow-up não é incômodo</h3><p>Muita venda sai depois do terceiro contato. Quem some, perde pra quem insiste com educação.</p></li>
+        <li class="etapa" id="etapa-3"><span class="etapa__n">03</span><span class="etapa__fundo" aria-hidden="true">03</span><h3>Rotina acima de motivação</h3><p>Motivação acaba. Rotina não. Faça o básico todo dia, até no dia ruim.</p></li>
+        <li class="etapa" id="etapa-4"><span class="etapa__n">04</span><span class="etapa__fundo" aria-hidden="true">04</span><h3>Saiba seus números</h3><p>Quantos contatos, quantas conversas, quantos fechamentos. Quem mede sabe onde melhorar.</p></li>
+      </ol>
     </section>
 
     <section class="sec fim rv" aria-labelledby="fim-t">
       <div class="fim__foto"><img class="js-par" src="images/comemoracao.webp" alt="Pedro e a equipe comercial comemorando com as mãos para o alto em evento de vendas" width="1200" height="1500" loading="lazy" decoding="async"></div>
       <div class="fim__corpo">
-        <span class="rotulo" style="color:rgba(255,255,255,.8)">Próximo passo</span>
-        <h2 class="titulo" id="fim-t">Vamos conversar sobre <em>a sua clínica</em></h2>
-        <p class="texto">Uma conversa direta para entender o comercial da sua clínica hoje e mostrar <b>qual ajuste vem primeiro</b> para faturar mais, com previsibilidade.</p>
-        <a class="btn btn--branco js-wa" data-msg="Olá, Pedro! Vim pela sua página e quero conversar sobre a minha clínica." href="#" target="_blank" rel="noopener">
+        <span class="rotulo" style="color:rgba(255,255,255,.8)">A próxima decisão é sua</span>
+        <h2 class="titulo" id="fim-t">Eu não nasci vendendo. <em>Eu decidi aprender.</em></h2>
+        <p class="texto">Tudo começou com uma caixa de isopor. Se você quiser, <b>eu te mostro o caminho</b>. Me chama e conta onde você está hoje.</p>
+        <a class="btn btn--branco js-wa" data-msg="Oi Pedro! Vi seu site e quero sair do inferno das vendas 😅" href="#" target="_blank" rel="noopener">
           <span class="btn__wa" aria-hidden="true"><svg><use href="#wa"/></svg></span>
-          <span class="btn__txt"><b>Chamar no WhatsApp</b><small>Resposta direta do Pedro</small></span>
+          <span class="btn__txt"><b>Quero o outro caminho</b><small>Chamar o Pedro no WhatsApp</small></span>
           <span class="btn__seta" aria-hidden="true"><svg width="20" height="20"><use href="#seta"/></svg></span>
         </a>
         <p class="lema">Presença <i aria-hidden="true"></i> Performance <i aria-hidden="true"></i> Propósito</p>
@@ -770,14 +778,14 @@ ul,ol{padding:0;list-style:none}
       <span class="ouro">@aleelopesx</span>
       <span class="credito__ig"><svg aria-hidden="true"><use href="#ig"/></svg>Ver no Instagram</span>
     </a>
-    <span class="rodape__info">Pedro Teixeira · Vendas &amp; Cultura · Brasil © 2026</span>
+    <span class="rodape__info">Pedro Teixeira · Vendas &amp; Comercial · Brasil © 2026</span>
   </footer>
 </div>
 
 <div class="dock" aria-hidden="true">
-  <a class="btn js-wa" tabindex="-1" data-msg="Olá, Pedro! Vim pela sua página e quero aumentar o faturamento da minha clínica com previsibilidade." href="#" target="_blank" rel="noopener">
+  <a class="btn js-wa" tabindex="-1" data-msg="Oi Pedro! Vi seu site e quero vender mais. Me ajuda?" href="#" target="_blank" rel="noopener">
     <span class="btn__wa"><svg><use href="#wa"/></svg></span>
-    <span class="btn__txt"><b>Quero faturar mais</b><small>Conversa direta com o Pedro</small></span>
+    <span class="btn__txt"><b>Quero vender mais</b><small>Conversa direta com o Pedro</small></span>
     <span class="btn__seta"><svg width="20" height="20"><use href="#seta"/></svg></span>
   </a>
 </div>
@@ -898,58 +906,11 @@ ul,ol{padding:0;list-style:none}
     dots.forEach((d,i)=>d.classList.toggle("on",i===best))};
   gal.addEventListener("scroll",()=>requestAnimationFrame(galFrame),{passive:true});galFrame();
 
-  /* PAINEL */
-  const painel=$(".js-painel");
-  const META=120000,DIA=19,DIAS=30,PREV=[21400,26800,24100];
-  const st={fat:84300,f:[142,86,71,38],aberto:46900};
-  const brl=v=>"R$ "+Math.round(v).toLocaleString("pt-BR");
-  const k1=v=>(v/1000).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1})+"k";
-  const semB=[...painel.querySelectorAll(".sem__b")],fnB=[...painel.querySelectorAll(".fn__b i")],fnRows=[...painel.querySelectorAll(".fn")];
-  const fatEl=$(".js-fat");
-  const render=()=>{
-    const atual=st.fat-PREV.reduce((a,b)=>a+b,0),ritmo=st.fat/DIA,proj=ritmo*DIAS,dia=Math.ceil(META/ritmo);
-    fatEl.textContent=brl(st.fat);
-    $(".js-fatpct").textContent=Math.min(100,Math.round(st.fat/META*100))+"%";
-    $(".js-falta").textContent=st.fat>=META?"R$ 0":brl(META-st.fat);
-    $(".js-proj").textContent=brl(proj);
-    $(".js-dia").textContent=st.fat>=META?"meta batida":"dia "+Math.min(DIAS,dia);
-    $(".js-fat-b").style.width=Math.min(100,st.fat/META*100)+"%";
-    $(".js-proj-b").style.width=Math.min(100,proj/META*100)+"%";
-    const mx=32000;[...PREV,atual].forEach((v,i)=>semB[i].style.height=Math.min(100,v/mx*100)*.8+"%");
-    $(".js-sem-v").textContent=k1(atual);
-    const f=st.f;$(".js-f0").textContent=f[0];$(".js-f1").textContent=f[1];$(".js-f2").textContent=f[2];$(".js-f3").textContent=f[3];
-    $(".js-p1").textContent=Math.round(f[1]/f[0]*100)+"%";$(".js-p2").textContent=Math.round(f[2]/f[1]*100)+"%";$(".js-p3").textContent=Math.round(f[3]/f[2]*100)+"%";
-    f.forEach((v,i)=>fnB[i].style.width=(v/f[0]*100)+"%");
-    $(".js-ticket").textContent=brl(st.fat/f[3]);
-    $(".js-aberto").textContent=brl(st.aberto);
-  };
-  const pula=i=>{fnRows[i].classList.remove("pula");void fnRows[i].offsetWidth;fnRows[i].classList.add("pula")};
-  const toast=$(".js-toast"),toastT=$(".js-toast-t");
-  const pac=[["LB","Avaliação estética",1800],["JS","Check-up completo",3200],["TA","Programa de emagrecimento",5400],["MP","Tratamento capilar",8400],["CF","Cirurgia",14500],["AL","Consulta + exames",950],["RM","Protocolo hormonal",6900],["VC","Harmonização",2400],["GR","Procedimento",4800]];
-  const feed=$(".js-feed"),lbl={chegou:"Chamou",conversa:"Avaliação",fechou:"Fechou"};
-  let k=0,ligado=false;
-  const novo=()=>{
-    const [ini,nome,v]=pac[k++%pac.length];
-    const el=document.createElement("div");el.className="lead";el.dataset.s="chegou";
-    el.innerHTML=`<span class="lead__av">${ini}</span><span class="lead__info"><b>${nome}</b><span>${brl(v)} · via WhatsApp</span></span><span class="status"><i></i><em style="font-style:normal">${lbl.chegou}</em></span>`;
-    feed.prepend(el);while(feed.children.length>4)feed.lastElementChild.remove();
-    st.f[0]++;pula(0);render();
-    const set=s=>{el.dataset.s=s;el.querySelector("em").textContent=lbl[s]};
-    setTimeout(()=>{set("conversa");st.f[1]++;st.f[2]++;pula(1);pula(2);render()},1400);
-    setTimeout(()=>{
-      set("fechou");st.f[3]++;pula(3);
-      st.fat+=v;st.aberto=Math.max(28000,st.aberto-v+Math.round(Math.random()*5)*1000+3000);
-      if(st.fat>META*1.06){st.fat=84300;st.f=[142,86,71,38];st.aberto=46900}
-      fatEl.classList.add("pula");setTimeout(()=>fatEl.classList.remove("pula"),500);
-      toastT.textContent=`Fechou · ${brl(v)}`;toast.classList.add("on");setTimeout(()=>toast.classList.remove("on"),1700);
-      render();
-    },2900);
-  };
-  const pio=new IntersectionObserver(es=>es.forEach(e=>{
-    if(!e.isIntersecting||ligado)return;ligado=true;painel.classList.add("on");render();
-    if(!reduz){setTimeout(novo,900);setInterval(novo,4200)}
-  }),{threshold:.2});
-  pio.observe(painel);
+  /* ceu x inferno */
+  const du=$(".js-duelo"),bts=[...document.querySelectorAll(".js-chave button")];
+  if(du){let mexeu=false;const vai=c=>{du.classList.toggle("ceu",c);bts.forEach((b,i)=>b.setAttribute("aria-pressed",String(i===(c?1:0))))};
+    bts.forEach((b,i)=>b.addEventListener("click",()=>{mexeu=true;vai(i===1)}));
+    new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();setTimeout(()=>{if(!mexeu)vai(true)},2600)}),{threshold:.6}).observe(du)}
 })();
 </script>
 </body>
